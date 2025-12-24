@@ -1,10 +1,13 @@
 {
   "name": "todo_backend",
   "version": "1.0.0",
-  "description": "A production-ready Express.js backend for task management with user profile management.",
-  "main": "index.js",
+  "description": "Production-ready Express.js backend for Task Management",
+  "type": "module",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +16,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/ChamodSathsara/startup_task_todo_app/issues"
   },
