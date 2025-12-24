@@ -15,6 +15,11 @@ A production-ready Express.js backend for task management with user profile mana
 - ✅ CORS enabled
 - ✅ Clean architecture with separation of concerns
 
+### Important Note: Cold Starts
+
+⚠️ **Render Free Tier Limitation:** Services on the free tier spin down after 15 minutes of inactivity. The first request after inactivity may take 30-50 seconds to respond while the service spins up. This is normal behavior for free tier deployments.
+
+
 ## Tech Stack
 
 - **Runtime:** Node.js
@@ -52,15 +57,15 @@ server/
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
-- MongoDB (local or Atlas)
+- Node.js 
+- MongoDB 
 
 ### Installation
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd server
+git clone https://github.com/ChamodSathsara/startup_task_todo_app
+
 ```
 
 2. Install dependencies:
@@ -71,7 +76,7 @@ npm install
 3. Create `.env` file in the root directory:
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/taskmanager
+MONGODB_URI=mongodb+srv://sathsara:startup123@cluster0.fgvwskj.mongodb.net/
 NODE_ENV=development
 ```
 
@@ -91,14 +96,14 @@ The server will start at `http://localhost:5000`
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `PORT` | Server port | 5000 |
-| `MONGODB_URI` | MongoDB connection string | mongodb://localhost:27017/taskmanager |
+| `MONGODB_URI` | MongoDB connection string | mongodb+srv://sathsara:startup123@cluster0.fgvwskj.mongodb.net/ |
 | `NODE_ENV` | Environment mode | development |
 
 ### MongoDB Atlas Setup
 
 For production, use MongoDB Atlas:
 
-1. Create a free cluster at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+1. Create a free cluster at (https://www.mongodb.com/cloud/atlas)
 2. Get your connection string
 3. Update `.env`:
 ```env
@@ -228,36 +233,7 @@ All errors follow this format:
 - `404` - Not Found
 - `500` - Internal Server Error
 
-## Deployment on Render (Free Tier)
 
-### Steps:
-
-1. Push your code to GitHub
-
-2. Create a new Web Service on [Render](https://render.com)
-
-3. Connect your repository
-
-4. Configure:
-   - **Build Command:** `npm install`
-   - **Start Command:** `npm start`
-
-5. Add Environment Variables:
-   ```
-   MONGODB_URI=<your-mongodb-atlas-uri>
-   NODE_ENV=production
-   ```
-
-6. Deploy!
-
-### Important Note: Cold Starts
-
-⚠️ **Render Free Tier Limitation:** Services on the free tier spin down after 15 minutes of inactivity. The first request after inactivity may take 30-50 seconds to respond while the service spins up. This is normal behavior for free tier deployments.
-
-**Solutions:**
-- Upgrade to a paid plan for 24/7 uptime
-- Use a ping service to keep the server warm
-- Inform users about potential initial delays
 
 ## Testing the API
 
