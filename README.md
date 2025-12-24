@@ -9,7 +9,6 @@ A production-ready Express.js backend for task management with user profile mana
 - ✅ Task scheduling with date/time support
 - ✅ Calendar filtering by date
 - ✅ User profile management
-- ✅ Password hashing with bcrypt
 - ✅ Centralized error handling
 - ✅ MongoDB with Mongoose ODM
 - ✅ CORS enabled
