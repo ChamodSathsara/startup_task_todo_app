@@ -5,6 +5,7 @@ import {
   updateUser
 } from '../controllers/user.controller.js';
 
+console.log("User routes loaded");
 const router = express.Router();
 
 router.post('/', createUser);
