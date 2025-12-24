@@ -1,6 +1,6 @@
 # Task Manager Backend
 
-A production-ready Express.js backend for task management with user profile management.
+A production-ready Express.js backend for task management.
 
 ## Features
 
